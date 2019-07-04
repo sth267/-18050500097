@@ -1,9 +1,9 @@
-#ifndef _MORSE_H
-#define _MORSE_H
-class Morse
+#ifndef _SMORSE_H
+#define _SMORSE_H
+class SMorse
 {
   public:
-    Morse(int pin);
+    SMorse(int pin);
     void dot();
     void dash();
     void c_space();
@@ -39,4 +39,4 @@ class Morse
     int _pin;
     int _dottime;
 };
-#endif /*_MORSE_H*/
+#endif /*_SMORSE_H*/

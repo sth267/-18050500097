@@ -2,7 +2,7 @@
 
 
 
-Morse morse(13);
+SMorse morse(13);
 int incomingByte = 0;
 void setup()
 {

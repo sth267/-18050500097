@@ -1,14 +1,14 @@
 #include "Arduino.h"
-#include "Morse.h"
+#include "SMorse.h"
 
-Morse::Morse(int pin)
+SMorse::SMorse(int pin)
 {
 	pinMode(pin,OUTPUT);
 	_pin=pin;
 	_dottime=250;
 }
 
-void Morse::dot()
+void SMorse::dot()
 {
 	digitalWrite(_pin,HIGH);
 	delay(_dottime);
@@ -16,7 +16,7 @@ void Morse::dot()
 	delay(_dottime);
 }
 
-void Morse::dash()
+void SMorse::dash()
 {
 	digitalWrite(_pin,HIGH);
 	delay(_dottime*4);
@@ -24,179 +24,177 @@ void Morse::dash()
 	delay(_dottime);
 }
 
-void Morse::c_space()
+void SMorse::c_space()
 {
 	digitalWrite(_pin,LOW);
 	delay(_dottime*3);
 }
 
-void Morse::w_space()
+void SMorse::w_space()
 {
 	digitalWrite(_pin,LOW);
 	delay(_dottime*7);
 }
-void Morse::al_a()
+void SMorse::al_a()
 {
-	digitalWrite(_pin,HIGH);
-	delay(_dottime);
-	digitalWrite(_pin,LOW);
-	delay(_dottime);
+	dot();
+	dash();
 }
-void Morse::al_b(Morse m)
+void SMorse::al_b()
 {
-	m.dash();
-	m.dot();
-	m.dot();
-	m.dot();
+	dash();
+	dot();
+	dot();
+	dot();
 }
-void Morse::al_c(Morse m)
+void SMorse::al_c()
 {
-	m.dash();
-	m.dot();
-	m.dash();
-	m.dot();
+	dash();
+	dot();
+	dash();
+	dot();
 }
-void Morse::al_d(Morse m)
+void SMorse::al_d()
 {
-	m.dash();
-	m.dot();
-	m.dot();
+	dash();
+	dot();
+	dot();
 }
-void Morse::al_e(Morse m)
+void SMorse::al_e()
 {
-	m.dot();
+	dot();
 }
-void Morse::al_f(Morse m)
+void SMorse::al_f()
 {
-	m.dot();
-	m.dot();
-	m.dash();
-	m.dot();
+	dot();
+	dot();
+	dash();
+	dot();
 }
-void Morse::al_g(Morse m)
+void SMorse::al_g()
 {
-	m.dash();
-	m.dash();
-	m.dot();
+	dash();
+	dash();
+	dot();
 }
-void Morse::al_h(Morse m)
+void SMorse::al_h()
 {
-	m.dot();
-	m.dot();
-	m.dot();
-	m.dot();
-	m.dot();
+	dot();
+	dot();
+	dot();
+	dot();
+	dot();
 }
-void Morse::al_i(Morse m)
+void SMorse::al_i()
 {
-	m.dot();
-	m.dot();
+	dot();
+	dot();
 }
-void Morse::al_j(Morse m)
+void SMorse::al_j()
 {
-	m.dot();
-	m.dash();
-	m.dash();
-	m.dash();
+	dot();
+	dash();
+	dash();
+	dash();
 }
-void Morse::al_k(Morse m)
+void SMorse::al_k()
 {
-	m.dash();
-	m.dot();
-	m.dash();
+	dash();
+	dot();
+	dash();
 }
-void Morse::al_l(Morse m)
+void SMorse::al_l()
 {
-	m.dot();
-	m.dash();
-	m.dot();
-	m.dot();
+	dot();
+	dash();
+	dot();
+	dot();
 }
-void Morse::al_m(Morse m)
+void SMorse::al_m()
 {
-	m.dash();
-	m.dash();
+	dash();
+	dash();
 }
-void Morse::al_n(Morse m)
+void SMorse::al_n()
 {
-	m.dash();
-	m.dot();
+	dash();
+	dot();
 }
-void Morse::al_o(Morse m)
+void SMorse::al_o()
 {
-	m.dash();
-	m.dash();
-	m.dash();
+	dash();
+	dash();
+	dash();
 }
-void Morse::al_p(Morse m)
+void SMorse::al_p()
 {
-	m.dot();
-	m.dash();
-	m.dash();
-	m.dot();
+	dot();
+	dash();
+	dash();
+	dot();
 }
-void Morse::al_q(Morse m)
+void SMorse::al_q()
 {
-	m.dash();
-	m.dash();
-	m.dot()
-	m.dash()
+	dash();
+	dash();
+	dot();
+	dash();
 }
-void Morse::al_r(Morse m)
+void SMorse::al_r()
 {
-	m.dot();
-	m.dash();
-	m.dot();
+	dot();
+	dash();
+	dot();
 }
-void Morse::al_s(Morse m)
+void SMorse::al_s()
 {
-	m.dot();
-	m.dot();
-	m.dot();
+	dot();
+	dot();
+	dot();
 }
-void Morse::al_t(Morse m)
+void SMorse::al_t()
 {
-	m.dash();
+	dash();
 }
-void Morse::al_u(Morse m)
+void SMorse::al_u()
 {
-	m.dot();
-	m.dot();
-	m.dash();
+	dot();
+	dot();
+	dash();
 }
-void Morse::al_v(Morse m)
+void SMorse::al_v()
 {
-	m.dot();
-	m.dot();
-	m.dot();
-	m.dash();
+	dot();
+	dot();
+	dot();
+	dash();
 }
-void Morse::al_w(Morse m)
+void SMorse::al_w()
 {
-	m.dot();
-	m.dash();
-	m.dash();
+	dot();
+	dash();
+	dash();
 }
-void Morse::al_x(Morse m)
+void SMorse::al_x()
 {
-	m.dash();
-	m.dot();
-	m.dot();
-	m.dash();
+	dash();
+	dot();
+	dot();
+	dash();
 }
-void Morse::al_y(Morse m)
+void SMorse::al_y()
 {
-	m.dash();
-	m.dot();
-	m.dash();
-	m.dash();
+	dash();
+	dot();
+	dash();
+	dash();
 }
-void Morse::al_z(Morse m)
+void SMorse::al_z()
 {
-	m.dash();
-	m.dash();
-	m.dot();
-	m.dot();
+	dash();
+	dash();
+	dot();
+	dot();
 }
 
 
